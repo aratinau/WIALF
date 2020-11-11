@@ -22,3 +22,18 @@ RETURN:
 3: Object { "@id": "/api/categories/3001", "@type": "Category", id: 3001, … }
 4: Object { "@id": "/api/categories/3000", "@type": "Category", id: 3000, … }
 ```
+
+```javascript
+const data = await categoryManager.findAll();
+const all2 = Object.assign({name: "All"}, data)
+console.log("all2", all2)
+```
+
+RETURN:
+```
+7: Object { "@id": "/api/categories/2955", "@type": "Category", id: 2955, … }
+8: Object { "@id": "/api/categories/2958", "@type": "Category", id: 2958, … }
+9: Object { "@id": "/api/categories/2956", "@type": "Category", id: 2956, … }
+10: Object { "@id": "/api/categories/2957", "@type": "Category", id: 2957, … }
+name: "All"
+```
