@@ -1,5 +1,4 @@
 # rename a table
-
 ALTER TABLE user RENAME TO ksante_user;
 
 SELECT COUNT(Id) as nb,last_name FROM ruj88yt_sellers GROUP BY (last_name) ORDER BY nb DESC;
