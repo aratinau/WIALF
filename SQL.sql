@@ -102,3 +102,9 @@ SELECT DISTINCT TABLE_NAME
     WHERE COLUMN_NAME IN ('columnA','ColumnB')
         AND TABLE_SCHEMA='YourDatabase';
 
+
+faire un select a partir d'un resultat groupé avec un DISTINCT
+------------------------------
+
+
+SELECT id WHERE IN (SELECT DISTINCT shipment_id REPLACE("DB", ""));
