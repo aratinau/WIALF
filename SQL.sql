@@ -1,6 +1,4 @@
-# SQL
-
-## rename a table
+--  rename a table
 
 ALTER TABLE user RENAME TO ksante_user;
 
@@ -29,18 +27,16 @@ GROUP BY id
 ORDER BY id DESC
 
 
-product_vendor
--------------
+--product_vendor
 
 SELECT term_id,taxonomy FROM ruj88yt_term_taxonomy WHERE taxonomy="product_vendor";
 
 list taxonomy woo
---------
+
 
 SELECT taxonomy FROM ruj88yt_term_taxonomy GROUP BY taxonomy;
 
-sql liste usesrs rustinés
----------------
+--sql liste usesrs rustinés
 
 SELECT * FROM ruj88yt_users WHERE id IN (198,
 149,
@@ -50,28 +46,24 @@ SELECT * FROM ruj88yt_users WHERE id IN (198,
 310)
 
 
-mettre une colonne à null
-------------
+--mettre une colonne à null
 
 Update myTable set MyColumn = NULL
 Update ruj88yt_sellers set on_holidays_until = NULL WHERE on_holidays_until = "0000-00-00"
 
 SELECT * FROM ruj88yt_sellers WHERE on_holidays_until = "0000-00-00"
 
-trouver les comptes à rustiner
-------------------------------
+--trouver les comptes à rustiner
 
 SELECT * FROM ruj88yt_sellers WHERE first_name = ""
 
 
-check si deux colonnes sont identiques
-------------------
+--check si deux colonnes sont identiques
 
 select * from ruj88yt_sellers WHERE chatfuel_user_id != messenger_user_id
 
 
-find duplicate values
-------------------
+--find duplicate values
 
 SELECT
     name, email, COUNT(*)
@@ -82,14 +74,14 @@ GROUP BY
 HAVING 
     COUNT(*) > 1
 
-check if column exist
-------------------
+--check if column exist
+
+
 IF EXISTS(SELECT 1 FROM sys.columns 
           WHERE Name = N'columnName')
 
 
-differnce
----------
+--differnce
 
 SELECT paiements_impvend.*
 FROM paiements_impvend
@@ -97,8 +89,8 @@ FROM paiements_impvend
 WHERE paiements_impvend.id_woo IS NULL
 
 
-chercher les colonnes avec tel nom (checher columnA et ColumnB)
-----------------------------------
+--chercher les colonnes avec tel nom (checher columnA et ColumnB)
+
 
 SELECT DISTINCT TABLE_NAME 
     FROM INFORMATION_SCHEMA.COLUMNS
@@ -106,16 +98,16 @@ SELECT DISTINCT TABLE_NAME
         AND TABLE_SCHEMA='YourDatabase';
 
 
-faire un select a partir d'un resultat groupé avec un DISTINCT
-------------------------------
-
+--faire un select a partir d'un resultat groupé avec un DISTINCT
 
 SELECT id WHERE IN (SELECT DISTINCT shipment_id REPLACE("DB", ""));
-## export
 
+
+--export
+ 
 mysqldump --databases DATABASENAME > file_to_import.sql
 
-## import
+--import
 
 mysql -uroot -p DATABASENAME < file_to_import.sql
 
