@@ -105,7 +105,7 @@ SELECT id WHERE IN (SELECT DISTINCT shipment_id REPLACE("DB", ""));
 
 --export
  
-mysqldump --databases DATABASENAME > file_to_import.sql
+mysqldump -uroot -proot --databases DATABASENAME > file_to_import.sql
 
 --import
 
