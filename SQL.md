@@ -1,4 +1,7 @@
-# rename a table
+# SQL
+
+## rename a table
+
 ALTER TABLE user RENAME TO ksante_user;
 
 SELECT COUNT(Id) as nb,last_name FROM ruj88yt_sellers GROUP BY (last_name) ORDER BY nb DESC;
@@ -108,3 +111,11 @@ faire un select a partir d'un resultat groupé avec un DISTINCT
 
 
 SELECT id WHERE IN (SELECT DISTINCT shipment_id REPLACE("DB", ""));
+## export
+
+mysqldump --databases DATABASENAME > file_to_import.sql
+
+## import
+
+mysql -uroot -p DATABASENAME < file_to_import.sql
+
