@@ -19,3 +19,7 @@
 ## undo ignore le tracking 
 
 `git update-index --no-assume-unchanged .env`
+
+## voir le contenu d'un stash 
+
+`git stash show -p stash@{0}`
