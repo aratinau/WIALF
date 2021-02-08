@@ -23,3 +23,7 @@
 ## voir le contenu d'un stash 
 
 `git stash show -p stash@{0}`
+
+## you want your own independent version of the file or folder. For instance, you don't want to overwrite (or delete) production/staging config files
+
+`git update-index --skip-worktree <path-name>`
