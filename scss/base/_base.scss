@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; // 1rem = 10px (pour nous, car au départ il vaut 16px puis on a fait 10/16 = 62.5%)
+
+    /* inutile car tab-port s'en occupe
+    @include respond(phone) {
+        font-size: 50%;
+    } */
+
+    @include respond(tab-land) { // est ce que la width est inférieur à 1200px ? (max-width)
+        font-size: 56.25%; // 1 rem = 9px donc pour le calculer 9/16 = 56.25%
+    }
+
+    @include respond(tab-port) { // est ce que la width est inférieur à 900px ? (max-width)
+        font-size: 50%; // 1 rem = 8px donc pour le calculer 8/16 = 50%
+    }
+
+    // regle de moi -> "si c'est plus petit, on place en dessous", quand c'est les max-width
+
+    @include respond(big-desktop) { // (min-width)
+        font-size: 75%; // 1 rem = 12px donc pour le calculer
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
