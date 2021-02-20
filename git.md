@@ -27,3 +27,7 @@
 ## you want your own independent version of the file or folder. For instance, you don't want to overwrite (or delete) production/staging config files
 
 `git update-index --skip-worktree <path-name>`
+
+## differnce d'un fichier entre deux branches
+
+`git diff mybranch master -- file.ext`
