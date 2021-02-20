@@ -28,6 +28,10 @@
 
 `git update-index --skip-worktree <path-name>`
 
-## differnce d'un fichier entre deux branches
+## pour le undo du skip worktree
+
+`git update-index --no-skip-worktree`
+
+## difference d'un fichier entre deux branches
 
 `git diff mybranch master -- file.ext`
