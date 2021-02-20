@@ -30,7 +30,7 @@
 
 ## pour le undo du skip worktree
 
-`git update-index --no-skip-worktree`
+`git update-index --no-skip-worktree <path-name>`
 
 ## difference d'un fichier entre deux branches
 
