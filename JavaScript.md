@@ -24,7 +24,7 @@ function handleChange(event) {
 
 ### update item in array
 
-```
+```js
 updateListCourier = (courier) => {
     let foundIndex = this.state.allCouriers.findIndex(x => x["@id"] == courier["@id"]);
     let newStateCouriers = this.state.allCouriers[foundIndex]
