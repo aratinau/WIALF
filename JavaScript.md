@@ -21,3 +21,13 @@ function handleChange(event) {
     setImages(result)
 }
 ```
+
+### update item in array
+
+```
+updateListCourier = (courier) => {
+    let foundIndex = this.state.allCouriers.findIndex(x => x["@id"] == courier["@id"]);
+    let newStateCouriers = this.state.allCouriers[foundIndex]
+    newStateCouriers.subject = "toto")
+}
+```
