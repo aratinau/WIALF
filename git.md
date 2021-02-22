@@ -12,6 +12,10 @@
 
 `git reset --soft HEAD~1`
 
+## undo the undo last commit 
+
+`git reset 'HEAD@{1}'`
+
 ## ignore le tracking 
 
 `git update-index --assume-unchanged .env`
