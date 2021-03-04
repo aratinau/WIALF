@@ -7,7 +7,11 @@
 then run with
 
     codecept run --debug
-    
+
+## clean
+
+    php vendor/bin/codecept clean
+
 ## run one test
 
     php vendor/bin/codecept run --debug api tests/api/requests/RequestCest:tryToGetRequestsById
