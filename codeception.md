@@ -11,3 +11,7 @@ then run with
 ## run one test
 
     php vendor/bin/codecept run --debug api tests/api/requests/RequestCest:tryToGetRequestsById
+
+## generate
+
+    php vendor/bin/codecept generate:cest api File
