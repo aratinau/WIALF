@@ -19,3 +19,7 @@ Gedmo\Timestampable\Traits\TimestampableEntity;
 
 use TimestampableEntity;
 ```
+
+## fichier config complet
+
+`php bin/console config:dump security`
