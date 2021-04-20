@@ -23,3 +23,7 @@ use TimestampableEntity;
 ## fichier config complet
 
 `php bin/console config:dump security`
+
+## debug config file
+
+`php bin/console debug:config api_platform`
