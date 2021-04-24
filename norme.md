@@ -3,31 +3,42 @@
 ## Entity
 
 ```php
-$id
-$createdAt
-$updatedAt
+<?php
 
 /**
- * @Groups({"user:read"})
- * @Assert\NotBlank()
+ * @ORM\HasLifecycleCallbacks()
+ * @ApiResource()
+ * @ORM\Entity(repositoryClass=PlanOptionRepository::class)
+ * @ApiFilter(OrderFilter::class)
  */
-private $foo;
-
-public function __construct()
+class User 
 {
+	$id
+	$createdAt
+	$updatedAt
 
-}
+	/**
+	 * @Groups({"user:read"})
+	 * @Assert\NotBlank()
+	 */
+	private $foo;
 
-/**
- * @ORM\PreRemove()
- */
-public function preRemove()
-{
+	public function __construct()
+	{
 
-}
+	}
 
-public function getId(): ?int
-{
-    return $this->id;
+	/**
+	 * @ORM\PreRemove()
+	 */
+	public function preRemove()
+	{
+
+	}
+
+	public function getId(): ?int
+	{
+	    return $this->id;
+	}
 }
 ```
