@@ -7,7 +7,10 @@ $id
 $createdAt
 $updatedAt
 
-__construct()
+public function __construct()
+{
+
+}
 
 /**
  * @ORM\PreRemove()
