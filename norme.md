@@ -14,6 +14,10 @@ __construct()
  */
 public function preRemove() {}
 
+public function getId(): ?int
+{
+    return $this->id;
+}
 
 /**
  * @Groups({"user:read"})
