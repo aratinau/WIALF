@@ -7,6 +7,15 @@ namespace AppBundle\Entity;
 
 class Entity
 {
+
+    /**
+     * @return ArrayCollection|GenusScientist[]
+     */
+    public function getGenusScientists()
+    {
+        return $this->genusScientists;
+    }
+    
     public function getExpertScientists()
     {
         // This 3 blocks of code do the same thing
