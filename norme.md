@@ -41,4 +41,6 @@ class User
 		return $this->id;
 	}
 	}
+	
+	public function setOwner(?User $owner): self
 ```
