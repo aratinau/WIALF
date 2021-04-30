@@ -42,5 +42,14 @@ class User
 	}
 	}
 	
+	
+	/**
+	* @Groups({"admin:read", "request_payement:collection:post", "request_payement:read"})
+	* @Assert\NotBlank(message="Vous devez choisir une formule.")
+	* @ORM\ManyToOne(targetEntity=Plan::class)
+	* @ORM\JoinColumn(nullable=false)
+	*/
+	private $plan;
+	
 	public function setOwner(?User $owner): self
 ```
