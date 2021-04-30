@@ -40,8 +40,25 @@ class User
 	{
 		return $this->id;
 	}
+
+	/**
+	* @SerializedName("isRequestPaid")
+	* @Groups({"admin:read", "request:read"})
+	*/
+	public function isRequestPaid()
+	{
+		return $this->getRequestPayement()->getPayementStatus();
 	}
-	
+
+	/**
+	* @ORM\PreRemove()
+	*/
+	public function preRemove()
+	{
+	if ($this->requestPayement->count() > 0)
+	{
+	    throw new \Exception("You can't do that.", 403);
+	}
 	
 	/**
 	* @Groups({"admin:read", "request_payement:collection:post", "request_payement:read"})
