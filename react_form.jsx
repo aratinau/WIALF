@@ -35,7 +35,9 @@ class Example extends Component {
                     rows="5"
                     value={this.state.publicAnswer}
                     onChange={element => {
-                        console.log(element.target.value)
+                        this.setState({
+                            publicAnswer: element.target.value
+                        })
                     }}
                 />
 
