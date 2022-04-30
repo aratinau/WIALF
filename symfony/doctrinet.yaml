@@ -1,0 +1,33 @@
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                url: '%env(resolve:DATABASE_URL)%'
+                wrapper_class: App\DBAL\SiteDbConnectionWrapper
+            configuration:
+                url: '%env(resolve:DATABASE_CONFIG_URL)%'
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        default_entity_manager: default
+        entity_managers:
+            default:
+                connection: default
+                naming_strategy: doctrine.orm.naming_strategy.underscore
+                mappings:
+                    App:
+                        is_bundle: false
+                        type: annotation
+                        dir: '%kernel.project_dir%/src/Entity'
+                        prefix: 'App\Entity'
+                        alias: App
+            configuration:
+                connection: configuration
+                naming_strategy: doctrine.orm.naming_strategy.underscore
+                mappings:
+                    Site:
+                        is_bundle: false
+                        type: annotation
+                        dir: '%kernel.project_dir%/src/ConfigurationEntity'
+                        prefix: 'App\ConfigurationEntity'
+                        alias: Configuration
