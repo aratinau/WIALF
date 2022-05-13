@@ -10,6 +10,5 @@ response.map((element) => {
 ////////////// if element is null
 courierFiles: response['hydra:member'].map((courier) => {
     courier.filePath = courier.name ?? courier.filePath
-
     return courier
 })
