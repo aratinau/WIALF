@@ -1,4 +1,4 @@
-// Comment convertir des elements qui sont pas toujours là en string.
+# Comment convertir des elements qui sont pas toujours là en string.
 
 ```js
 output = element.nameFrom
@@ -10,11 +10,11 @@ output = element.nameFrom
             + element.owner.lastName
 ```
 
-// transformer owner en owners
+## transformer owner en owners
 
 `element.owners.map(o => o.firstName + ' ' + o.lastName).join (', ')`
 
-// transformation en array du tout
+## transformation en array du tout
 
 ```js
 output = [
@@ -24,7 +24,7 @@ output = [
 ].join(' - ')
 ```
 
-// ajout au tableau avec condition
+## ajout au tableau avec condition
 
 ```js
 output = [
@@ -34,4 +34,4 @@ output = [
 ].join(' - ')
 ```
 
-// source: https://2ality.com/2017/04/conditional-literal-entries.html#is-it-worth-it%3F
+### source: https://2ality.com/2017/04/conditional-literal-entries.html#is-it-worth-it%3F
