@@ -35,3 +35,11 @@ public function up(Schema $schema): void
     $this->addSql("UPDATE courier SET name_from = NULL WHERE direction = 'outcoming'");
     $this->addSql('ALTER TABLE courier ALTER direction TYPE VARCHAR(100)');
 }
+
+public function up(Schema $schema): void
+{
+    // this up() migration is auto-generated, please modify it to your needs
+    $this->addSql('ALTER TABLE chapter ADD version VARCHAR(255)');
+    $this->addSql('UPDATE chapter SET version = \'api-platform-v2.6\'');
+    $this->addSql('ALTER TABLE chapter ALTER COLUMN version SET NOT NULL');
+}
