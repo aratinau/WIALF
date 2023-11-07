@@ -1,5 +1,9 @@
 # Symfony
 
+## migration specific version
+
+`php bin/console doctrine:migrations:migrate 'DoctrineMigrations\Version20180605025653'`
+
 ## generate entities from database
 
 `php bin/console doctrine:mapping:import "App\Entity" annotation --path=src/Entity/Export`
